@@ -1,7 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
-require("dotenv").config(); 
+require("dotenv").config();
 
 const app = express();
 const PORT = 8080;
@@ -9,6 +9,7 @@ const PORT = 8080;
 app.use(express.json());
 app.use(cors());
 
+// Coingecko API key
 const COINGECKO_API_KEY = process.env.COINGECKO_API_KEY;
 
 // Middleware to add API key to each request
@@ -17,7 +18,7 @@ const addApiKey = (req, res, next) => {
   next();
 };
 
-// Applying the middleware to all routes
+// Apply the middleware to all routes
 app.use(addApiKey);
 
 app.get("/api/cryptocurrencies", async (req, res) => {
