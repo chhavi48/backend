@@ -3,6 +3,7 @@ const cors = require("cors");
 const errorHandler = require("./middleware/errorHandler");
 const ConnectDb = require("./config/dbConnection");
 require("dotenv").config();
+const emailSender = require("./routes/emailSender");
 const app = express();
 
 app.use(cors());
@@ -28,7 +29,7 @@ app.use(addApiKey);
 app.use("/api/cryptocurrencies", require("./routes/cryptocurrencies"));
 app.use("/api/convert", require("./routes/convert"));
 app.use("/api/users", require("./routes/user"));
-
+emailSender();
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
