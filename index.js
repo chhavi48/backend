@@ -29,7 +29,7 @@ app.use(addApiKey);
 app.use("/api/cryptocurrencies", require("./routes/cryptocurrencies"));
 app.use("/api/convert", require("./routes/convert"));
 app.use("/api/users", require("./routes/user"));
-emailSender();
+// emailSender();
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
