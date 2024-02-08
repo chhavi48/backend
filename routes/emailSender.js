@@ -16,9 +16,9 @@ const emailSender=()=>{
       // Email options
       const mailOptions = {
         from: 'sichhavi48@gmail.com', // Sender's email address
-        to: 'exam.portal.asy@gmail.com', // Recipient's email address
-        subject: 'reply from bubu', // Email subject
-        text: 'mai kyo khau tum khalo' // Email body
+        to: 'exam.@gmail.com', // Recipient's email address
+        subject: 'hii', // Email subject
+        text: 'hello' // Email body
       };
       
       // Send the email
